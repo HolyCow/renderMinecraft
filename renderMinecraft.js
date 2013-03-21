@@ -105,6 +105,8 @@ function clock() {
 var f = 0;
 function renderMinecraft() {
    
+    // these modifiers adjust how much the perspective changes
+    // 0.0 is none, 3.0 will rotate the perspective 360 degrees
     var vertical_perspective = 0.4;
     var horizonal_perspective = 0.4;
 
@@ -205,7 +207,7 @@ function renderMinecraft() {
 
             var r = ((col >> 16) & 0xff) * br * ddist / (255 * 255);
             var g = ((col >> 8) & 0xff) * br * ddist / (255 * 255);
-            var b = ((col) & 0xff) * br * ddist / (255 * 255);// + (255 -
+            var b = ((col) & 0xff) * br * ddist / (255 * 255);
 
             pixels.data[(x + y * w) * 4 + 0] = r;
             pixels.data[(x + y * w) * 4 + 1] = g;
